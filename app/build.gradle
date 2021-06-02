@@ -16,6 +16,7 @@ apply from: '../signing.gradle'
 //#ifdef NONFREE
 buildscript {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -34,7 +35,7 @@ android {
     buildToolsVersion '30.0.3'
     defaultConfig {
         applicationId 'me.zhanghai.android.files'
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 23
         versionName '1.2.1'
@@ -157,6 +158,7 @@ dependencies {
     implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
     implementation 'dev.rikka.rikkax.preference:simplemenu-preference:1.0.3'
     implementation 'dev.rikka.shizuku:api:11.0.2'
+    implementation "dev.rikka.shizuku:provider:11.0.2"
     implementation 'eu.chainfire:librootjava:1.3.1'
     implementation 'eu.chainfire:libsuperuser:1.1.0.201907261845'
     implementation ('eu.agno3.jcifs:jcifs-ng:2.1.5') {
